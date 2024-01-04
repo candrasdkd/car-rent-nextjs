@@ -11,8 +11,9 @@ interface CarCardProps {
 
 const CarCard = ({ car }: CarCardProps) => {
     const [open, setOpen] = useState(false)
-    const { city_mpg, year, make, model, transmission, drive } = car;
+    const { city_mpg, fuel_type, year, make, model, transmission } = car;
     const carRent = calculateCarRent(city_mpg, year)
+
     return (
         <div className='car-card group'>
             <div className='car-card__content'>
@@ -59,7 +60,7 @@ const CarCard = ({ car }: CarCardProps) => {
                             height={20}
                         />
                         <p className='text-[14px]'>
-                            {drive.toUpperCase()}
+                            {year}
                         </p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-2'>
@@ -70,7 +71,7 @@ const CarCard = ({ car }: CarCardProps) => {
                             height={20}
                         />
                         <p className='text-[14px]'>
-                            {city_mpg} MPG
+                            {fuel_type.toLocaleUpperCase()}
                         </p>
                     </div>
                 </div>
