@@ -18,7 +18,7 @@ const Footer = () => {
                     />
                     <p className='text-base text-gray-700'>
                         Carhub 2003 <br />
-                        All rights reserved &copy;
+                        All rights reserved & copy;
                     </p>
                 </div>
 
